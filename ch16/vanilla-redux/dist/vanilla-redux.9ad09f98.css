@@ -1,5 +1,10 @@
+body {
+    text-align: center;
+
+}
 .toggle {
-    border: 2px solid black;
+    display: inline-block;
+    border: 2px solid rgb(0, 0, 0);
     width: 64px;
     height: 64px;
     border-radius: 32px;
