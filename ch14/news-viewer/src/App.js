@@ -1,42 +1,21 @@
-import React, { useState } from 'react';
-import axios from '../node_modules/axios/index';
+import React from 'react';
+import { Route } from 'react-router-dom';
+import NewsPage from './page/NewsPage';
 
 const App = () => {
-  const [data, setData] = useState(null);
+  // 1) useState로 카테고리를 관리하는 방법
+  // const [category, setCategory] = useState('all');
+  // const onSelect = useCallback((category) => setCategory(category), []);
 
-  // axios.get 함수를 사용하여 불러오기
-  // const onClick = () => {
-  //   axios
-  //     .get('https://jsonplaceholder.typicode.com/todos/1')
-  //     .then((response) => {
-  //       setData(response.data);
-  //     });
-  // };
+  // return (
+  //   <>
+  //     <Categories category={category} onSelect={onSelect} />
+  //     <NewsList category={category} />
+  //   </>
+  // );
 
-  const onClick = async () => {
-    try {
-      const response = await axios.get(
-        'https://newsapi.org/v2/top-headlines?country=kr&apiKey=22ff47f773bd4db9b21428aa8f6185e1',
-      );
-      setData(response.data);
-    } catch (e) {
-      console.log(e);
-    }
-  };
-  return (
-    <div>
-      <div>
-        <button onClick={onClick}>불러오기</button>
-      </div>
-      {data && (
-        <textarea
-          rows={7}
-          value={JSON.stringify(data, null, 2)}
-          readOnly={true}
-        />
-      )}
-    </div>
-  );
+  // 2) URL 파라미터를 통해 category 값을 관리하는 방법
+  return <Route path="/:category?" component={NewsPage} />;
 };
 
 export default App;
