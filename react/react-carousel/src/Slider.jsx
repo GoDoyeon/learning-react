@@ -5,45 +5,6 @@ import img1 from './img/1.png';
 import img2 from './img/2.png';
 import img3 from './img/3.png';
 
-const Container = styled.div`
-  width: 40.68em;
-  margin: auto;
-  height: 1000px;
-  overflow: hidden; // 선을 넘어간 이미지들은 숨겨줍니다.
-`;
-const Button = styled.div`
-  all: unset;
-  padding: 1em 2em;
-  margin: 2em 2em;
-  color: burlywood;
-  border-radius: 10px;
-  border: 1px solid burlywood;
-  &:hover {
-    background-color: burlywood;
-    color: #fff;
-  }
-`;
-const SliderContainer = styled.div`
-  margin: auto;
-  width: 100%;
-  margin-bottom: 2em;
-  display: flex; // 이미지들을 가로로 나열합니다.
-`;
-const Text = styled.div`
-  text-align: center;
-  color: burlywood;
-  p {
-    color: #fff;
-    font-size: 20px;
-    background-color: burlywood;
-    display: inline-block;
-    border-radius: 50px;
-    padding: 0.5em 1em;
-  }
-`;
-const Center = styled.div`
-  text-align: center;
-`;
 const TOTAL_SLIDES = 2; // 전체 슬라이드 개수(총3개. 배열로 계산)
 
 export default function Slider() {
@@ -93,3 +54,42 @@ export default function Slider() {
     </Container>
   );
 }
+const Container = styled.div`
+  width: 500px;
+  margin: auto;
+  height: 1000px;
+  overflow: hidden; // 선을 넘어간 이미지들은 숨겨줍니다.
+`;
+const Button = styled.div`
+  all: unset;
+  padding: 1em 2em;
+  margin: 2em 2em;
+  color: burlywood;
+  border-radius: 10px;
+  border: 1px solid burlywood;
+  cursor: pointer;
+  &:hover {
+    background-color: burlywood;
+    color: #fff;
+  }
+`;
+const SliderContainer = styled.div`
+  margin: 0 auto;
+  margin-bottom: 2em;
+  display: flex; // 이미지들을 가로로 나열합니다.
+`;
+const Text = styled.div`
+  text-align: center;
+  color: burlywood;
+  p {
+    color: #fff;
+    font-size: 20px;
+    background-color: burlywood;
+    display: inline-block;
+    border-radius: 50px;
+    padding: 0.5em 1em;
+  }
+`;
+const Center = styled.div`
+  text-align: center;
+`;
