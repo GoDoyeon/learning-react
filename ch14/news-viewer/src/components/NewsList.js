@@ -24,7 +24,7 @@ const NewsList = ({ category }) => {
     return axios.get(
       `https://newsapi.org/v2/top-headlines?country=kr${query}&apiKey=22ff47f773bd4db9b21428aa8f6185e1`,
     );
-  }, [category]); // category 값이 바뀔 때마다 뉴스를 불러와야 하기 때문에 useEffect의 의존 배열에 category 넣어 줌s
+  }, [category]); // category 값이 바뀔 때마다 뉴스를 불러와야 하기 때문에 useEffect의 의존 배열에 category 넣어 줌
 
   // 대기 중일 때
   if (loading) {
