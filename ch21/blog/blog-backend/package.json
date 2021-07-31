@@ -7,11 +7,11 @@
     "eslint-config-prettier": "^4.1.0",
     "koa": "^2.13.1",
     "koa-bodyparser": "^4.2.1",
-    "koa-router": "^7.4.0"
+    "koa-router": "^10.0.0"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
-    "nodemon": "^1.18.11"
+    "nodemon": "^2.0.12"
   },
   "scripts": {
     "start": "node src",

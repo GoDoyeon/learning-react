@@ -1,23 +1,10 @@
 const Koa = require('koa');
+const Router = require('koa-router');
 
 const app = new Koa();
+const router = new Router();
 
-app.use((ctx, next) => {
-  console.log(ctx.url);
-  console.log(1);
-  if (ctx.query.authorized !== '1') {
-    ctx.state = 401; // Unauthorized
-    return;
-  }
-  next().then(() => {
-    console.log('END');
-  });
-});
-
-app.use((ctx, next) => {
-  console.log(2);
-  next();
-});
+// 라우터 설정
 
 app.use((ctx) => {
   ctx.body = 'hello world';
