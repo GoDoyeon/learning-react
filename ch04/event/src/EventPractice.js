@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 
 // 함수형 컴포넌트
 const EventPractice = () => {
@@ -28,7 +28,7 @@ const EventPractice = () => {
   };
   return (
     <div>
-      <h1>이벤트 연습(함수형 컴포넌트)</h1>
+      <h1>이벤트 연습 - 함수형 컴포넌트</h1>
       <input
         type='text'
         name='username'

@@ -32,7 +32,7 @@ export default class EventPracticeClass extends Component {
   render() {
     return (
       <div>
-        <h1>이벤트 연습(클래스형 컴포넌트 사용)</h1>
+        <h1>이벤트 연습 - 클래스형 컴포넌트 사용</h1>
         <input
           type='text'
           name='username'
